@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Weather Dashboard</h1>
+      <p class="subtitle">Search any city — powered by Open‑Meteo (no API key)</p>
+    </header>
+
+    <main>
+      <form id="search-form" class="search">
+        <input id="city-input" placeholder="Enter city (e.g. São Paulo, London)" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+
+      <section id="status" class="status" aria-live="polite"></section>
+
+      <section id="current" class="card hidden">
+        <h2 id="location"></h2>
+        <div class="current-row">
+          <div class="temp" id="temp"></div>
+          <div class="details">
+            <div id="cond"></div>
+            <div id="wind"></div>
+            <div id="time"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="forecast" class="hidden">
+        <h3>7-day forecast</h3>
+        <div id="forecast-list" class="forecast-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Data from <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open‑Meteo</a></small>
+    </footer>
+  </div>
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

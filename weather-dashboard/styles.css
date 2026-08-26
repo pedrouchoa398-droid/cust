@@ -1,0 +1,33 @@
+/* Simple mobile-first styles for the Weather Dashboard */
+:root{
+  --bg:#0f172a;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#38bdf8;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background: linear-gradient(180deg,var(--bg) 0%, #071029 100%);
+  color:#e6eef8; -webkit-font-smoothing:antialiased; padding:16px;
+}
+.app{max-width:760px;margin:0 auto}
+header{margin-bottom:12px}
+h1{margin:0;font-size:20px}
+.subtitle{margin:4px 0 0;color:var(--muted);font-size:13px}
+.search{display:flex;gap:8px;margin:12px 0}
+.search input{flex:1;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+.search button{padding:10px 14px;border-radius:8px;border:none;background:var(--accent);color:#072038;font-weight:600}
+.status{color:var(--muted);margin:8px 0}
+.card{background:var(--card);padding:12px;border-radius:12px;margin-top:10px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.hidden{display:none}
+.current-row{display:flex;align-items:center;gap:12px}
+.temp{font-size:44px;font-weight:700}
+.details{color:var(--muted);font-size:14px}
+.forecast-list{display:flex;gap:8px;overflow:auto;padding:8px 0}
+.forecast-item{min-width:110px;background:var(--glass);padding:8px;border-radius:10px;text-align:center}
+.forecast-item .day{font-weight:600}
+footer{margin-top:18px;color:var(--muted);font-size:13px}
+@media(min-width:640px){.app{padding:20px} body{padding:24px}}
